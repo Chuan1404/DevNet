@@ -1,9 +1,9 @@
-import React from "react";
 import { createTheme, Grid, ThemeProvider } from "@mui/material";
+import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import Routers from "./routers";
+import { SideLeft } from "./components";
 import Header from "./components/Header";
-import { Container } from "@mui/system";
+import Routers from "./routers";
 
 export default function App() {
   const theme = createTheme({
@@ -21,16 +21,17 @@ export default function App() {
     <ThemeProvider theme={theme}>
       <BrowserRouter>
         <Header />
-        <Container id="Layout" maxWidth="xl">
-          <Grid container>
-            <Grid item xs={4}>
-              Sidebar
+        <div id="Layout">
+          <Grid container spacing={3}>
+            <Grid item xs={3}>
+              <SideLeft />
             </Grid>
-            <Grid item xs={8}>
+            <Grid item xs={6}>
               <Routers />
             </Grid>
+            <Grid item xs={3} />
           </Grid>
-        </Container>
+        </div>
       </BrowserRouter>
     </ThemeProvider>
   );
