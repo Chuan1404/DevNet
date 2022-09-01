@@ -11,6 +11,7 @@ import {
 } from "@mui/material";
 import { Box } from "@mui/system";
 import React from "react";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   let options = [
@@ -43,11 +44,13 @@ export default function Header() {
 
         <Box sx={{ flexGrow: 1 }} />
         <Box sx={{ display: "flex", alignItems: "center" }}>
-          <IconButton size="large" aria-label="show 4 new mails" color="secondary">
-            <Badge badgeContent={4} color="error">
-              <ModeComment />
-            </Badge>
-          </IconButton>
+          <Link to="/message">
+            <IconButton size="large" aria-label="show 4 new mails" color="secondary">
+              <Badge badgeContent={4} color="error">
+                <ModeComment />
+              </Badge>
+            </IconButton>
+          </Link>
           <IconButton size="large" aria-label="show 17 new notifications" color="secondary">
             <Badge badgeContent={17} color="error">
               <Notifications />
