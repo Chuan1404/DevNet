@@ -11,14 +11,13 @@ export default function SideLeft() {
   return (
     <Box className="sideLeft">
       <Container maxWidth="xl">
-        {pathname != "/message" ? (
-          <>
+        {pathname == "/" && (
+          <Box bgcolor={"white"} padding={2} borderRadius={2}>
             <FriendsRequestBox title="Lời mời kết bạn" />
             <FriendsRequestBox title="Gợi ý kết bạn" />
-          </>
-        ) : (
-          <ChatList />
+          </Box>
         )}
+        {pathname == "/message" && <ChatList />}
       </Container>
     </Box>
   );
