@@ -4,7 +4,7 @@ import { StatusCreator, Status } from "../../components";
 
 export default function Homepage() {
   return (
-    <Box id="homepage" className="page" bgcolor="white">
+    <Box id="homepage" className="page">
       <StatusCreator />
 
       <Status />

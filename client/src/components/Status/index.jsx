@@ -1,5 +1,4 @@
-import { Avatar, Divider, IconButton, Typography } from "@mui/material";
-import { Box, Container, Stack } from "@mui/system";
+import { Avatar, Divider, IconButton, Typography, Stack, Box, Container } from "@mui/material";
 import { Favorite, Reply, ChatBubbleOutline } from "@mui/icons-material";
 import React from "react";
 
